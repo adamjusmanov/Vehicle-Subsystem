@@ -9850,6 +9850,14 @@ naming: grid - package width</description>
 <text x="86.36" y="99.06" size="1.778" layer="91" grouprefs="POWERDELIVERYBOARD">3.3V Regulator</text>
 <text x="149.86" y="99.06" size="1.778" layer="91" grouprefs="POWERDELIVERYBOARD">5V Regulator</text>
 <text x="7.62" y="66.04" size="1.778" layer="91" grouprefs="POWERDELIVERYBOARD">Lipo Battery</text>
+<text x="-111.76" y="210.82" size="2.54" layer="91">The footprint for this is not the XT-60 connector that I assume we will
+ be using. It needs to be correct so that when you layout the board
+ and we fab it the connector will fit.</text>
+<text x="33.02" y="218.44" size="2.54" layer="91">These reg footprints look closer but they don't have the no-go zone for
+them to be folded back, or the through hole to hold them on.</text>
+<text x="132.08" y="157.48" size="1.778" layer="91">The measuring point should be netted to the MCU whenever it is
+ added. This would mess up the 3.3 rail and cause bad measurements.</text>
+<text x="55.88" y="121.92" size="2.54" layer="91">This is redundant, board layout should be done in the board file.</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="60.96" y="48.26" smashed="yes" grouprefs="POWERDELIVERYBOARD"/>
@@ -10147,6 +10155,10 @@ naming: grid - package width</description>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
