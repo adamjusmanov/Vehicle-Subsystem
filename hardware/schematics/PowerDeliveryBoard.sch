@@ -6866,6 +6866,12 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <sheets>
 <sheet>
 <plain>
+<text x="53.34" y="43.18" size="1.778" layer="91">Although the package footprints were the same, the pinout for the
+regulators were different last year. If we are using the same 3v3 reg 
+then we will have to account for that. Look at the datasheet of whatever
+regualtor we are getting to check the exact pinout</text>
+<text x="182.88" y="-7.62" size="1.778" layer="91">This resistor footprint looks small. Make sure we will be able to actually
+fit the resistors on the board</text>
 </plain>
 <instances>
 <instance part="P+4" gate="VCC" x="78.74" y="22.86" smashed="yes" rot="R270" grouprefs="5VREGULATOR">
@@ -7032,6 +7038,10 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
