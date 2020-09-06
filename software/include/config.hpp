@@ -6,4 +6,8 @@
 
 // Pin mapping
 
+#define DEBUG_LED_0 13
+#define DEBUG_LED_1 13
+#define DEBUG_LED_2 13
+
 #endif /* PINS_HPP */
