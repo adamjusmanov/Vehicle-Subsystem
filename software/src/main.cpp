@@ -1,23 +1,15 @@
-#include <Arduino.h>
-#include "config.hpp"
+#incude <Arduino.h>
 
-void setup() 
+
+int init() // runs once
 {
-#ifdef DEBUG
-    Serial.begin(9600);
-    while (!Serial.availableForWrite())
-    {
-        // busy wait
-    }
 
-    Serial.println("init");
-#endif
 }
 
-void loop()
-{
-#ifdef DEBUG
-    Serial.println("loop!");
-#endif
-    delay(1000); // delay for 1 second
+int loop() // runs a lot
+{   
+    // poll sensors
+    // detect events
+    // send packets
+    // log data
 }
